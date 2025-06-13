@@ -12,7 +12,7 @@ Komponen ini dibangun menggunakan **Python** dan disajikan sebagai **Flask API**
 ## 📁 Struktur Folder
 
 ```
-python/
+collaborative-learning/
 ├── app.py               ← API Flask utama
 ├── services/            ← Modul pemrosesan dan model rekomendasi
 │   ├── recipe_recommender.py  ← Kode utama model collaborative & content-based
