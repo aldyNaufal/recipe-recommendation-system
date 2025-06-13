@@ -22,4 +22,8 @@ beautifulsoup4==4.12.2
 keras==2.15.0
 protobuf==3.20.3
 
-uvicorn
+# Text preprocessing (untuk Bahasa Indonesia)
+Sastrawi==1.0.1
+
+# Server (optional untuk ASGI, biasanya dipakai jika pakai FastAPI bukan Flask)
+uvicorn==0.27.1
