@@ -1,0 +1,7 @@
+# ENV
+images/
+venv/
+*.pyd
+*.lib
+__pycache__/
+.env
