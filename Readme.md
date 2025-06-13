@@ -1,34 +1,42 @@
-# 🍲 Recipe Recommendation Web App
+# 🧠 Recipe Recommendation ML API
 
-Proyek ini terdiri dari dua komponen utama:
+Ini adalah bagian Machine Learning dari sistem rekomendasi resep makanan berbasis **collaborative learning**, menggunakan pendekatan:
 
-1. **Backend Node.js** (folder: `node`) — untuk mengelola permintaan dari web.
-2. **Model Machine Learning (Python)** (folder: `python`) — sistem rekomendasi resep berbasis ML.
+* **User-based Collaborative Filtering**
+* **Item-based Collaborative Filtering**
 
-Kedua bagian ini bekerja bersama untuk menyajikan rekomendasi resep ke website frontend.
+Komponen ini dibangun menggunakan **Python** dan disajikan sebagai **Flask API** yang akan dihubungkan oleh backend (Node.js) untuk melayani permintaan rekomendasi.
 
 ---
 
 ## 📁 Struktur Folder
 
 ```
-.
-├── node/     ← Backend Node.js
-└── python/   ← Model ML dengan Flask API
+python/
+├── app.py               ← API Flask utama
+├── services/            ← Modul pemrosesan dan model rekomendasi
+│   ├── recipe_recommender.py  ← Kode utama model collaborative & content-based
+├── data/                ← Dataset resep dan user
+├── model/               ← File model yang telah disimpan (.pkl, .joblib)
+├── notebook/            ← Notebook eksplorasi, training, dan evaluasi model
+├── config/              ← Konfigurasi lingkungan (opsional)
+├── tests/               ← Unit test
+├── logs/                ← Log training atau inference
+└── requirements.txt     ← Daftar dependencies
 ```
 
 ---
 
-## 🧪 Menjalankan Proyek
+## 🚀 Cara Menjalankan
 
-Ikuti langkah-langkah berikut untuk menjalankan kedua komponen.
 
-### 1. Menjalankan Model Machine Learning (Python)
+1. **Buat virtual environment:**
 
 ```bash
-cd python
 python -m venv venv
 ```
+
+2. **Aktifkan environment:**
 
 > **Windows**
 
@@ -36,26 +44,26 @@ python -m venv venv
 .\venv\Scripts\activate
 ```
 
-> **Linux/macOS**
+> **macOS/Linux**
 
 ```bash
 source venv/bin/activate
 ```
 
-Install dependencies:
+3. **Install dependencies:**
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Buat file `.env` di dalam folder `python`:
+4. **Buat file `.env` (opsional):**
 
 ```env
 FLASK_PORT=5000
 FLASK_ENV=development
 ```
 
-Jalankan Flask API:
+5. **Jalankan API Flask:**
 
 ```bash
 python app.py
@@ -63,44 +71,61 @@ python app.py
 
 ---
 
-### 2. Menjalankan Backend Node.js
+## 📊 Tentang Model Rekomendasi
 
-Buka terminal baru, lalu:
+Model rekomendasi ini menggunakan pendekatan **hybrid**:
 
-```bash
-cd node
-npm install
-```
+### 🧩 1. Collaborative Filtering
 
-Buat file `.env` di dalam folder `node`:
+* **User-based**: merekomendasikan resep berdasarkan kesamaan pengguna (user-user similarity).
+* **Item-based**: merekomendasikan resep berdasarkan kesamaan antar resep (item-item similarity).
 
-```env
-PORT=3000
-MONGO_URI=DB
-JWT_SECRET=JWT Secret
-ML_API_BASE_URL=Model
-FLASK_API_URL=http://localhost:5000
-```
+### 📝 2. Content-based Filtering
 
-> Gantilah `MONGO_URI`, `JWT_SECRET`, dan `ML_API_BASE_URL` sesuai kebutuhan Anda.
+* Menggunakan **TF-IDF vectorization** dari kombinasi:
 
-Jalankan server Node.js:
+  * Judul Resep (`Title Cleaned`)
+  * Bahan-bahan (`Ingredients Cleaned`)
+  * Langkah-langkah (`Steps Cleaned`)
 
-```bash
-npm start
-```
+Fitur-fitur tersebut kemudian digunakan untuk menghitung kemiripan antar resep.
+
+### 🧠 Algoritma & Teknik
+
+* **TF-IDF + Cosine Similarity** untuk kemiripan konten
+* **Matrix Factorization (optional)** atau **Nearest Neighbors** untuk collaborative filtering
+* **Penyatuan skor** dari collaborative dan content-based dengan bobot tertentu
 
 ---
 
-## ✅ Catatan
+## 📌 Contoh Endpoint
 
-* Pastikan Anda menjalankan **Flask API (Python)** terlebih dahulu sebelum memulai **Node.js backend**.
-* Keduanya harus berjalan bersamaan agar sistem rekomendasi bekerja optimal.
+Setelah API berjalan (`http://localhost:5000`), beberapa endpoint yang tersedia:
+
+* `GET /recommend/user/<user_id>`
+  → Rekomendasi resep berdasarkan histori user (user-based collaborative filtering)
+
+* `GET /recommend/item/<item_id>`
+  → Rekomendasi resep serupa dengan resep tertentu (item-based filtering)
+
+* `POST /recommend/content`
+  → Rekomendasi berdasarkan isi resep yang diberikan (TF-IDF content-based)
 
 ---
 
-## 🛠 Tech Stack
+## ✅ Catatan Penggunaan
 
-* **Backend**: Node.js, Express, MongoDB
-* **ML Model API**: Python, Flask
-* **Rekomendasi**: Collaborative Filtering & Text-based TF-IDF
+* Dataset di-*preprocess* dan disimpan dalam folder `data/`
+* Model yang telah dilatih disimpan dalam folder `model/`
+* API ini **tidak memiliki antarmuka pengguna langsung**, namun akan diakses oleh backend (Node.js)
+
+---
+
+## 🛠 Teknologi yang Digunakan
+
+* **Python 3.x**
+* **Flask** untuk API
+* **scikit-learn**, **pandas**, **numpy**
+* **TF-IDF Vectorizer**, **Cosine Similarity**
+* **Joblib/Pickle** untuk serialisasi model
+* **Custom class** untuk pemrosesan dan rekomendasi
