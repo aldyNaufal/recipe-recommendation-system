@@ -1,0 +1,345 @@
+2025-06-17 10:48:28,147 - __main__ - INFO - Recommender initialized successfully
+2025-06-17 10:48:28,147 - routes.recommendation_routes - INFO - Recommendation routes initialized
+2025-06-17 10:48:28,151 - __main__ - INFO - Flask app created with config: development
+2025-06-17 10:48:28,152 - __main__ - INFO - Starting Flask app in development mode
+2025-06-17 10:48:28,152 - __main__ - INFO - Debug mode: True
+2025-06-17 10:48:28,178 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.52.55:5000
+2025-06-17 10:48:28,178 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-17 10:48:28,181 - werkzeug - INFO -  * Restarting with stat
+2025-06-17 10:48:35,906 - __main__ - INFO - Recommender initialized successfully
+2025-06-17 10:48:35,906 - routes.recommendation_routes - INFO - Recommendation routes initialized
+2025-06-17 10:48:35,910 - __main__ - INFO - Flask app created with config: development
+2025-06-17 10:48:35,910 - __main__ - INFO - Starting Flask app in development mode
+2025-06-17 10:48:35,910 - __main__ - INFO - Debug mode: True
+2025-06-17 10:48:35,917 - werkzeug - WARNING -  * Debugger is active!
+2025-06-17 10:48:35,923 - werkzeug - INFO -  * Debugger PIN: 939-827-242
+2025-06-17 10:49:26,070 - werkzeug - INFO - 127.0.0.1 - - [17/Jun/2025 10:49:26] "GET /health HTTP/1.1" 200 -
+2025-06-17 10:52:38,138 - __main__ - INFO - Request: GET /existing-user/1 from 127.0.0.1
+2025-06-17 10:52:38,139 - __main__ - INFO - Auth header present: Bearer ***
+2025-06-17 10:52:38,139 - __main__ - INFO - Response: 404 for GET /existing-user/1
+2025-06-17 10:52:38,139 - werkzeug - INFO - 127.0.0.1 - - [17/Jun/2025 10:52:38] "[33mGET /existing-user/1 HTTP/1.1[0m" 404 -
+2025-06-17 11:06:48,029 - __main__ - INFO - Request: GET /existing-user/1 from 127.0.0.1
+2025-06-17 11:06:48,029 - __main__ - INFO - Auth header present: Bearer ***
+2025-06-17 11:06:48,030 - __main__ - INFO - Response: 404 for GET /existing-user/1
+2025-06-17 11:06:48,030 - werkzeug - INFO - 127.0.0.1 - - [17/Jun/2025 11:06:48] "[33mGET /existing-user/1 HTTP/1.1[0m" 404 -
+2025-06-17 11:08:47,952 - __main__ - INFO - Request: POST /existing-user from 127.0.0.1
+2025-06-17 11:08:47,953 - __main__ - INFO - Auth header present: Bearer ***
+2025-06-17 11:08:47,953 - __main__ - INFO - Response: 404 for POST /existing-user
+2025-06-17 11:08:47,954 - werkzeug - INFO - 127.0.0.1 - - [17/Jun/2025 11:08:47] "[33mPOST /existing-user HTTP/1.1[0m" 404 -
+2025-06-17 11:11:31,019 - __main__ - INFO - Request: POST /api/recommendations/existin from 127.0.0.1
+2025-06-17 11:11:31,019 - __main__ - INFO - Auth header present: Bearer ***
+2025-06-17 11:11:31,019 - __main__ - INFO - Response: 404 for POST /api/recommendations/existin
+2025-06-17 11:11:31,020 - werkzeug - INFO - 127.0.0.1 - - [17/Jun/2025 11:11:31] "[33mPOST /api/recommendations/existin HTTP/1.1[0m" 404 -
+2025-06-17 11:11:34,336 - __main__ - INFO - Request: POST /api/recommendations/existing-user from 127.0.0.1
+2025-06-17 11:11:34,337 - __main__ - INFO - Auth header present: Bearer ***
+2025-06-17 11:11:34,337 - services.auth_service - WARNING - Token has expired
+2025-06-17 11:11:34,337 - __main__ - INFO - Response: 401 for POST /api/recommendations/existing-user
+2025-06-17 11:11:34,338 - werkzeug - INFO - 127.0.0.1 - - [17/Jun/2025 11:11:34] "[31m[1mPOST /api/recommendations/existing-user HTTP/1.1[0m" 401 -
+2025-06-17 11:11:37,079 - __main__ - INFO - Request: POST /api/recommendations/existing-user from 127.0.0.1
+2025-06-17 11:11:37,079 - __main__ - INFO - Auth header present: Bearer ***
+2025-06-17 11:11:37,081 - services.auth_service - WARNING - Token has expired
+2025-06-17 11:11:37,081 - __main__ - INFO - Response: 401 for POST /api/recommendations/existing-user
+2025-06-17 11:11:37,081 - werkzeug - INFO - 127.0.0.1 - - [17/Jun/2025 11:11:37] "[31m[1mPOST /api/recommendations/existing-user HTTP/1.1[0m" 401 -
+2025-06-17 11:12:10,303 - __main__ - INFO - Request: POST /api/recommendations/existing-user from 127.0.0.1
+2025-06-17 11:12:10,303 - __main__ - INFO - Auth header present: Bearer ***
+2025-06-17 11:12:10,304 - services.auth_service - WARNING - Token has expired
+2025-06-17 11:12:10,304 - __main__ - INFO - Response: 401 for POST /api/recommendations/existing-user
+2025-06-17 11:12:10,305 - werkzeug - INFO - 127.0.0.1 - - [17/Jun/2025 11:12:10] "[31m[1mPOST /api/recommendations/existing-user HTTP/1.1[0m" 401 -
+2025-06-17 11:22:20,356 - __main__ - INFO - Recommender initialized successfully
+2025-06-17 11:22:20,357 - routes.recommendation_routes - INFO - Recommendation routes initialized
+2025-06-17 11:22:20,361 - __main__ - INFO - Flask app created with config: development
+2025-06-17 11:22:20,361 - __main__ - INFO - Starting Flask app in development mode
+2025-06-17 11:22:20,362 - __main__ - INFO - Debug mode: True
+2025-06-17 11:22:20,383 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.52.55:5000
+2025-06-17 11:22:20,384 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-17 11:22:20,386 - werkzeug - INFO -  * Restarting with stat
+2025-06-17 11:22:28,187 - __main__ - INFO - Recommender initialized successfully
+2025-06-17 11:22:28,187 - routes.recommendation_routes - INFO - Recommendation routes initialized
+2025-06-17 11:22:28,191 - __main__ - INFO - Flask app created with config: development
+2025-06-17 11:22:28,191 - __main__ - INFO - Starting Flask app in development mode
+2025-06-17 11:22:28,191 - __main__ - INFO - Debug mode: True
+2025-06-17 11:22:28,197 - werkzeug - WARNING -  * Debugger is active!
+2025-06-17 11:22:28,204 - werkzeug - INFO -  * Debugger PIN: 939-827-242
+2025-06-17 11:24:28,138 - werkzeug - INFO -  * Detected change in 'C:\\dbs\\Sistem Rekomendasi Makanan Indonesia\\config.py', reloading
+2025-06-17 11:24:28,922 - werkzeug - INFO -  * Restarting with stat
+2025-06-17 11:24:36,734 - __main__ - INFO - Recommender initialized successfully
+2025-06-17 11:24:36,735 - routes.recommendation_routes - INFO - Recommendation routes initialized
+2025-06-17 11:24:36,738 - __main__ - INFO - Flask app created with config: development
+2025-06-17 11:24:36,738 - __main__ - INFO - Starting Flask app in development mode
+2025-06-17 11:24:36,738 - __main__ - INFO - Debug mode: True
+2025-06-17 11:24:36,745 - werkzeug - WARNING -  * Debugger is active!
+2025-06-17 11:24:36,750 - werkzeug - INFO -  * Debugger PIN: 939-827-242
+2025-06-17 11:25:03,489 - __main__ - INFO - Request: POST /api/recommendations/health from 127.0.0.1
+2025-06-17 11:25:03,490 - __main__ - INFO - Auth header present: Bearer ***
+2025-06-17 11:25:03,490 - __main__ - ERROR - Unhandled exception: 405 Method Not Allowed: The method is not allowed for the requested URL.
+2025-06-17 11:25:03,556 - __main__ - ERROR - Traceback (most recent call last):
+  File "C:\dbs\Sistem Rekomendasi Makanan Indonesia\venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\dbs\Sistem Rekomendasi Makanan Indonesia\venv\Lib\site-packages\flask\app.py", line 1458, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\dbs\Sistem Rekomendasi Makanan Indonesia\venv\Lib\site-packages\flask\app.py", line 1440, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\dbs\Sistem Rekomendasi Makanan Indonesia\venv\Lib\site-packages\flask\ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\dbs\Sistem Rekomendasi Makanan Indonesia\venv\Lib\site-packages\werkzeug\routing\map.py", line 650, in match
+    raise MethodNotAllowed(valid_methods=list(e.have_match_for)) from None
+werkzeug.exceptions.MethodNotAllowed: 405 Method Not Allowed: The method is not allowed for the requested URL.
+
+2025-06-17 11:25:03,558 - __main__ - INFO - Response: 500 for POST /api/recommendations/health
+2025-06-17 11:25:03,559 - werkzeug - INFO - 127.0.0.1 - - [17/Jun/2025 11:25:03] "[35m[1mPOST /api/recommendations/health HTTP/1.1[0m" 500 -
+2025-06-17 11:25:14,608 - __main__ - INFO - Request: GET /api/recommendations/health from 127.0.0.1
+2025-06-17 11:25:14,609 - __main__ - INFO - Auth header present: Bearer ***
+2025-06-17 11:25:14,609 - __main__ - INFO - Response: 200 for GET /api/recommendations/health
+2025-06-17 11:25:14,610 - werkzeug - INFO - 127.0.0.1 - - [17/Jun/2025 11:25:14] "GET /api/recommendations/health HTTP/1.1" 200 -
+2025-06-17 11:25:50,852 - __main__ - INFO - Request: GET /api/recommendations/existing-user/1 from 127.0.0.1
+2025-06-17 11:25:50,852 - __main__ - INFO - Auth header present: Bearer ***
+2025-06-17 11:25:50,853 - services.auth_service - WARNING - Token has expired
+2025-06-17 11:25:50,853 - __main__ - INFO - Response: 401 for GET /api/recommendations/existing-user/1
+2025-06-17 11:25:50,854 - werkzeug - INFO - 127.0.0.1 - - [17/Jun/2025 11:25:50] "[31m[1mGET /api/recommendations/existing-user/1 HTTP/1.1[0m" 401 -
+2025-06-17 11:35:49,229 - werkzeug - INFO -  * Detected change in 'C:\\dbs\\Sistem Rekomendasi Makanan Indonesia\\services\\auth_service.py', reloading
+2025-06-17 11:35:50,011 - werkzeug - INFO -  * Restarting with stat
+2025-06-17 11:36:02,202 - __main__ - INFO - Recommender initialized successfully
+2025-06-17 11:36:02,202 - routes.recommendation_routes - INFO - Recommendation routes initialized
+2025-06-17 11:36:02,206 - __main__ - INFO - Flask app created with config: development
+2025-06-17 11:36:02,206 - __main__ - INFO - Starting Flask app in development mode
+2025-06-17 11:36:02,206 - __main__ - INFO - Debug mode: True
+2025-06-17 11:36:02,222 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.52.55:5000
+2025-06-17 11:36:02,223 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-17 11:36:02,225 - werkzeug - INFO -  * Restarting with stat
+2025-06-17 11:36:09,196 - __main__ - INFO - Recommender initialized successfully
+2025-06-17 11:36:09,197 - routes.recommendation_routes - INFO - Recommendation routes initialized
+2025-06-17 11:36:09,200 - __main__ - INFO - Flask app created with config: development
+2025-06-17 11:36:09,200 - __main__ - INFO - Starting Flask app in development mode
+2025-06-17 11:36:09,201 - __main__ - INFO - Debug mode: True
+2025-06-17 11:36:09,207 - werkzeug - WARNING -  * Debugger is active!
+2025-06-17 11:36:09,212 - werkzeug - INFO -  * Debugger PIN: 939-827-242
+2025-06-17 11:37:02,963 - __main__ - INFO - Request: GET /api/recommendations/existing-user/1 from 127.0.0.1
+2025-06-17 11:37:02,963 - __main__ - INFO - Auth header present: Bearer ***
+2025-06-17 11:37:02,964 - services.auth_service - WARNING - Token has expired
+2025-06-17 11:37:02,964 - __main__ - INFO - Response: 401 for GET /api/recommendations/existing-user/1
+2025-06-17 11:37:02,965 - werkzeug - INFO - 127.0.0.1 - - [17/Jun/2025 11:37:02] "[31m[1mGET /api/recommendations/existing-user/1 HTTP/1.1[0m" 401 -
+2025-06-17 11:37:10,383 - werkzeug - INFO -  * Detected change in 'C:\\dbs\\Sistem Rekomendasi Makanan Indonesia\\services\\auth_service.py', reloading
+2025-06-17 11:37:11,033 - werkzeug - INFO -  * Restarting with stat
+2025-06-17 11:37:27,064 - __main__ - INFO - Recommender initialized successfully
+2025-06-17 11:37:27,064 - routes.recommendation_routes - INFO - Recommendation routes initialized
+2025-06-17 11:37:27,068 - __main__ - INFO - Flask app created with config: development
+2025-06-17 11:37:27,068 - __main__ - INFO - Starting Flask app in development mode
+2025-06-17 11:37:27,068 - __main__ - INFO - Debug mode: True
+2025-06-17 11:37:27,088 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.52.55:5000
+2025-06-17 11:37:27,088 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-17 11:37:27,090 - werkzeug - INFO -  * Restarting with stat
+2025-06-17 11:37:34,134 - __main__ - INFO - Recommender initialized successfully
+2025-06-17 11:37:34,134 - routes.recommendation_routes - INFO - Recommendation routes initialized
+2025-06-17 11:37:34,137 - __main__ - INFO - Flask app created with config: development
+2025-06-17 11:37:34,138 - __main__ - INFO - Starting Flask app in development mode
+2025-06-17 11:37:34,138 - __main__ - INFO - Debug mode: True
+2025-06-17 11:37:34,143 - werkzeug - WARNING -  * Debugger is active!
+2025-06-17 11:37:34,148 - werkzeug - INFO -  * Debugger PIN: 939-827-242
+2025-06-17 11:37:39,137 - __main__ - INFO - Request: GET /api/recommendations/existing-user/1 from 127.0.0.1
+2025-06-17 11:37:39,137 - __main__ - INFO - Auth header present: Bearer ***
+2025-06-17 11:37:39,138 - services.auth_service - WARNING - Token has expired
+2025-06-17 11:37:39,139 - __main__ - INFO - Response: 401 for GET /api/recommendations/existing-user/1
+2025-06-17 11:37:39,140 - werkzeug - INFO - 127.0.0.1 - - [17/Jun/2025 11:37:39] "[31m[1mGET /api/recommendations/existing-user/1 HTTP/1.1[0m" 401 -
+2025-06-17 11:37:56,585 - werkzeug - INFO -  * Detected change in 'C:\\dbs\\Sistem Rekomendasi Makanan Indonesia\\services\\auth_service.py', reloading
+2025-06-17 11:37:57,520 - werkzeug - INFO -  * Restarting with stat
+2025-06-17 11:38:07,757 - __main__ - INFO - Recommender initialized successfully
+2025-06-17 11:38:07,757 - routes.recommendation_routes - INFO - Recommendation routes initialized
+2025-06-17 11:38:07,761 - __main__ - INFO - Flask app created with config: development
+2025-06-17 11:38:07,762 - __main__ - INFO - Starting Flask app in development mode
+2025-06-17 11:38:07,762 - __main__ - INFO - Debug mode: True
+2025-06-17 11:38:07,783 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.52.55:5000
+2025-06-17 11:38:07,783 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-17 11:38:07,786 - werkzeug - INFO -  * Restarting with stat
+2025-06-17 11:38:14,474 - __main__ - INFO - Recommender initialized successfully
+2025-06-17 11:38:14,474 - routes.recommendation_routes - INFO - Recommendation routes initialized
+2025-06-17 11:38:14,477 - __main__ - INFO - Flask app created with config: development
+2025-06-17 11:38:14,477 - __main__ - INFO - Starting Flask app in development mode
+2025-06-17 11:38:14,478 - __main__ - INFO - Debug mode: True
+2025-06-17 11:38:14,483 - werkzeug - WARNING -  * Debugger is active!
+2025-06-17 11:38:14,488 - werkzeug - INFO -  * Debugger PIN: 939-827-242
+2025-06-17 11:38:17,773 - __main__ - INFO - Request: GET /api/recommendations/existing-user/1 from 127.0.0.1
+2025-06-17 11:38:17,773 - __main__ - INFO - Auth header present: Bearer ***
+2025-06-17 11:38:17,774 - services.auth_service - WARNING - Token has expired
+2025-06-17 11:38:17,775 - __main__ - INFO - Response: 401 for GET /api/recommendations/existing-user/1
+2025-06-17 11:38:17,776 - werkzeug - INFO - 127.0.0.1 - - [17/Jun/2025 11:38:17] "[31m[1mGET /api/recommendations/existing-user/1 HTTP/1.1[0m" 401 -
+2025-06-17 11:39:35,521 - __main__ - INFO - Request: GET /api/recommendations/existing-user/1 from 127.0.0.1
+2025-06-17 11:39:35,522 - __main__ - INFO - Auth header present: Bearer ***
+2025-06-17 11:39:35,522 - services.auth_service - WARNING - Token has expired
+2025-06-17 11:39:35,523 - __main__ - INFO - Response: 401 for GET /api/recommendations/existing-user/1
+2025-06-17 11:39:35,533 - werkzeug - INFO - 127.0.0.1 - - [17/Jun/2025 11:39:35] "[31m[1mGET /api/recommendations/existing-user/1 HTTP/1.1[0m" 401 -
+2025-06-17 11:41:02,048 - __main__ - INFO - Request: GET /api/recommendations/existing-user/1 from 127.0.0.1
+2025-06-17 11:41:02,049 - __main__ - INFO - Auth header present: Bearer ***
+2025-06-17 11:41:02,051 - controllers.recommendation_controller - INFO - GET existing user recommendations request: {'user_id': 1, 'top_k': 10}
+2025-06-17 11:41:02,051 - controllers.recommendation_controller - INFO - Authenticated user: {'user_id': None, 'email': 'user@example.com', 'username': None, 'role': 'user', 'exp': 1750738310, 'iat': 1750133510}
+2025-06-17 11:41:02,051 - services.recommendation_service - INFO - Getting recommendations for user: 1, top_k: 10
+2025-06-17 11:41:02,051 - services.recommendation_service - ERROR - Error in existing user recommendations: Model belum ditraining!
+2025-06-17 11:41:02,052 - __main__ - INFO - Response: 500 for GET /api/recommendations/existing-user/1
+2025-06-17 11:41:02,052 - werkzeug - INFO - 127.0.0.1 - - [17/Jun/2025 11:41:02] "[35m[1mGET /api/recommendations/existing-user/1 HTTP/1.1[0m" 500 -
+2025-06-17 11:42:12,709 - __main__ - INFO - Request: GET /api/recommendations/new-user/1 from 127.0.0.1
+2025-06-17 11:42:12,709 - __main__ - INFO - Auth header present: Bearer ***
+2025-06-17 11:42:12,709 - __main__ - INFO - Response: 404 for GET /api/recommendations/new-user/1
+2025-06-17 11:42:12,710 - werkzeug - INFO - 127.0.0.1 - - [17/Jun/2025 11:42:12] "[33mGET /api/recommendations/new-user/1 HTTP/1.1[0m" 404 -
+2025-06-17 11:42:54,614 - __main__ - INFO - Request: GET /api/recommendations/new-user-get from 127.0.0.1
+2025-06-17 11:42:54,614 - __main__ - INFO - Auth header present: Bearer ***
+2025-06-17 11:42:54,615 - __main__ - INFO - Response: 400 for GET /api/recommendations/new-user-get
+2025-06-17 11:42:54,616 - werkzeug - INFO - 127.0.0.1 - - [17/Jun/2025 11:42:54] "[31m[1mGET /api/recommendations/new-user-get HTTP/1.1[0m" 400 -
+2025-06-17 11:49:17,363 - werkzeug - INFO -  * Detected change in 'C:\\dbs\\Sistem Rekomendasi Makanan Indonesia\\app.py', reloading
+2025-06-17 11:49:18,046 - werkzeug - INFO -  * Restarting with stat
+2025-06-17 11:49:27,925 - __main__ - ERROR - Failed to initialize recommender: name 'YourRecommenderClass' is not defined
+2025-06-17 11:49:27,925 - routes.recommendation_routes - INFO - Recommendation routes initialized
+2025-06-17 11:49:27,930 - __main__ - INFO - Flask app created with config: development
+2025-06-17 11:49:27,930 - __main__ - INFO - Starting Flask app in development mode
+2025-06-17 11:49:27,931 - __main__ - INFO - Debug mode: True
+2025-06-17 11:49:27,940 - werkzeug - WARNING -  * Debugger is active!
+2025-06-17 11:49:27,949 - werkzeug - INFO -  * Debugger PIN: 939-827-242
+2025-06-17 11:49:45,707 - werkzeug - INFO -  * Detected change in 'C:\\dbs\\Sistem Rekomendasi Makanan Indonesia\\app.py', reloading
+2025-06-17 11:49:46,401 - werkzeug - INFO -  * Restarting with stat
+2025-06-17 14:26:39,056 - __main__ - INFO - Recommender initialized successfully
+2025-06-17 14:26:39,056 - routes.recommendation_routes - INFO - Recommendation routes initialized
+2025-06-17 14:26:39,072 - __main__ - INFO - Flask app created with config: development
+2025-06-17 14:26:39,072 - __main__ - INFO - Starting Flask app in development mode
+2025-06-17 14:26:39,072 - __main__ - INFO - Debug mode: True
+2025-06-17 14:26:39,096 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.52.55:5000
+2025-06-17 14:26:39,101 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-17 14:26:39,102 - werkzeug - INFO -  * Restarting with stat
+2025-06-17 14:26:45,970 - __main__ - INFO - Recommender initialized successfully
+2025-06-17 14:26:45,970 - routes.recommendation_routes - INFO - Recommendation routes initialized
+2025-06-17 14:26:45,985 - __main__ - INFO - Flask app created with config: development
+2025-06-17 14:26:45,985 - __main__ - INFO - Starting Flask app in development mode
+2025-06-17 14:26:45,985 - __main__ - INFO - Debug mode: True
+2025-06-17 14:26:45,994 - werkzeug - WARNING -  * Debugger is active!
+2025-06-17 14:26:46,001 - werkzeug - INFO -  * Debugger PIN: 939-827-242
+2025-06-17 14:26:53,353 - __main__ - INFO - Request: GET /api/recommendations/existing-user/1 from 127.0.0.1
+2025-06-17 14:26:53,353 - __main__ - INFO - Auth header present: Bearer ***
+2025-06-17 14:26:53,353 - controllers.recommendation_controller - INFO - GET existing user recommendations request: {'user_id': 1, 'top_k': 10}
+2025-06-17 14:26:53,353 - controllers.recommendation_controller - INFO - Authenticated user: {'user_id': None, 'email': 'user@example.com', 'username': None, 'role': 'user', 'exp': 1750738310, 'iat': 1750133510}
+2025-06-17 14:26:53,353 - services.recommendation_service - INFO - Getting recommendations for user: 1, top_k: 10
+2025-06-17 14:26:53,353 - services.recommendation_service - ERROR - Error in existing user recommendations: EnhancedIndonesianRecipeRecommender.get_enhanced_recommendations() missing 1 required positional argument: 'self'
+2025-06-17 14:26:53,353 - __main__ - INFO - Response: 500 for GET /api/recommendations/existing-user/1
+2025-06-17 14:26:53,353 - werkzeug - INFO - 127.0.0.1 - - [17/Jun/2025 14:26:53] "[35m[1mGET /api/recommendations/existing-user/1 HTTP/1.1[0m" 500 -
+2025-06-17 14:30:15,864 - werkzeug - INFO -  * Detected change in 'C:\\dbs\\Sistem Rekomendasi Makanan Indonesia\\app.py', reloading
+2025-06-17 14:30:26,023 - __main__ - ERROR - Failed to initialize recommender: EnhancedIndonesianRecipeRecommender.load_model() takes 2 positional arguments but 4 were given
+2025-06-17 14:30:26,024 - __main__ - ERROR - Traceback (most recent call last):
+  File "C:\dbs\Sistem Rekomendasi Makanan Indonesia\app.py", line 51, in create_app
+    recommender.load_model(model_path, components_path, metadata_path)
+TypeError: EnhancedIndonesianRecipeRecommender.load_model() takes 2 positional arguments but 4 were given
+
+2025-06-17 14:30:26,024 - routes.recommendation_routes - INFO - Recommendation routes initialized
+2025-06-17 14:30:26,027 - __main__ - INFO - Flask app created with config: development
+2025-06-17 14:30:26,027 - __main__ - INFO - Starting Flask app in development mode
+2025-06-17 14:30:26,027 - __main__ - INFO - Debug mode: True
+2025-06-17 14:30:26,041 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.52.55:5000
+2025-06-17 14:30:26,041 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-17 14:30:26,043 - werkzeug - INFO -  * Restarting with stat
+2025-06-17 14:30:32,465 - __main__ - ERROR - Failed to initialize recommender: EnhancedIndonesianRecipeRecommender.load_model() takes 2 positional arguments but 4 were given
+2025-06-17 14:30:32,466 - __main__ - ERROR - Traceback (most recent call last):
+  File "C:\dbs\Sistem Rekomendasi Makanan Indonesia\app.py", line 51, in create_app
+    recommender.load_model(model_path, components_path, metadata_path)
+TypeError: EnhancedIndonesianRecipeRecommender.load_model() takes 2 positional arguments but 4 were given
+
+2025-06-17 14:30:32,466 - routes.recommendation_routes - INFO - Recommendation routes initialized
+2025-06-17 14:30:32,469 - __main__ - INFO - Flask app created with config: development
+2025-06-17 14:30:32,469 - __main__ - INFO - Starting Flask app in development mode
+2025-06-17 14:30:32,470 - __main__ - INFO - Debug mode: True
+2025-06-17 14:30:32,474 - werkzeug - WARNING -  * Debugger is active!
+2025-06-17 14:30:32,479 - werkzeug - INFO -  * Debugger PIN: 939-827-242
+2025-06-17 14:30:55,178 - __main__ - INFO - Request: GET /api/recommendations/existing-user/1 from 127.0.0.1
+2025-06-17 14:30:55,179 - __main__ - INFO - Auth header present: Bearer ***
+2025-06-17 14:30:55,180 - __main__ - INFO - Response: 500 for GET /api/recommendations/existing-user/1
+2025-06-17 14:30:55,181 - werkzeug - INFO - 127.0.0.1 - - [17/Jun/2025 14:30:55] "[35m[1mGET /api/recommendations/existing-user/1 HTTP/1.1[0m" 500 -
+2025-06-17 14:47:28,997 - werkzeug - INFO -  * Detected change in 'C:\\dbs\\Sistem Rekomendasi Makanan Indonesia\\scripts\\recipe_recommender.py', reloading
+2025-06-17 14:47:29,940 - werkzeug - INFO -  * Restarting with stat
+2025-06-17 14:48:32,078 - __main__ - INFO - Recommender instance created successfully
+2025-06-17 14:48:32,078 - __main__ - INFO - Current working directory: C:\dbs\Sistem Rekomendasi Makanan Indonesia
+2025-06-17 14:48:32,078 - __main__ - INFO - Checking paths:
+2025-06-17 14:48:32,078 - __main__ - INFO -   H5 model: models/recipe_recommender_model.h5 - exists: True
+2025-06-17 14:48:32,078 - __main__ - INFO -   Components: models/recipe_recommender_components.joblib - exists: True
+2025-06-17 14:48:32,078 - __main__ - INFO -   Metadata: models/recipe_recommender_metadata.json - exists: True
+2025-06-17 14:48:32,093 - __main__ - INFO - Found model files, attempting to load from: models/recipe_recommender
+2025-06-17 14:48:32,486 - tensorflow - WARNING - From C:\dbs\Sistem Rekomendasi Makanan Indonesia\venv\Lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-06-17 14:48:51,540 - __main__ - INFO - Model loaded successfully!
+2025-06-17 14:48:51,559 - routes.recommendation_routes - INFO - Recommendation routes initialized
+2025-06-17 14:48:51,580 - __main__ - INFO - Flask app created with config: development
+2025-06-17 14:48:51,588 - __main__ - INFO - Starting Flask app in development mode
+2025-06-17 14:48:51,588 - __main__ - INFO - Debug mode: True
+2025-06-17 14:48:51,701 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.52.55:5000
+2025-06-17 14:48:51,701 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-17 14:48:51,716 - werkzeug - INFO -  * Restarting with stat
+2025-06-17 14:49:02,337 - __main__ - INFO - Recommender instance created successfully
+2025-06-17 14:49:02,337 - __main__ - INFO - Current working directory: C:\dbs\Sistem Rekomendasi Makanan Indonesia
+2025-06-17 14:49:02,337 - __main__ - INFO - Checking paths:
+2025-06-17 14:49:02,337 - __main__ - INFO -   H5 model: models/recipe_recommender_model.h5 - exists: True
+2025-06-17 14:49:02,337 - __main__ - INFO -   Components: models/recipe_recommender_components.joblib - exists: True
+2025-06-17 14:49:02,337 - __main__ - INFO -   Metadata: models/recipe_recommender_metadata.json - exists: True
+2025-06-17 14:49:02,337 - __main__ - INFO - Found model files, attempting to load from: models/recipe_recommender
+2025-06-17 14:49:02,677 - tensorflow - WARNING - From C:\dbs\Sistem Rekomendasi Makanan Indonesia\venv\Lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-06-17 14:49:30,777 - __main__ - INFO - Model loaded successfully!
+2025-06-17 14:49:30,777 - routes.recommendation_routes - INFO - Recommendation routes initialized
+2025-06-17 14:49:30,792 - __main__ - INFO - Flask app created with config: development
+2025-06-17 14:49:30,792 - __main__ - INFO - Starting Flask app in development mode
+2025-06-17 14:49:30,792 - __main__ - INFO - Debug mode: True
+2025-06-17 14:49:30,847 - werkzeug - WARNING -  * Debugger is active!
+2025-06-17 14:49:30,863 - werkzeug - INFO -  * Debugger PIN: 939-827-242
+2025-06-17 14:49:45,264 - __main__ - INFO - Request: GET /api/recommendations/health from 127.0.0.1
+2025-06-17 14:49:45,264 - __main__ - INFO - Auth header present: Bearer ***
+2025-06-17 14:49:45,265 - __main__ - INFO - Response: 200 for GET /api/recommendations/health
+2025-06-17 14:49:45,266 - werkzeug - INFO - 127.0.0.1 - - [17/Jun/2025 14:49:45] "GET /api/recommendations/health HTTP/1.1" 200 -
+2025-06-17 14:50:04,380 - __main__ - INFO - Request: GET /api/recommendations/existing-user/1 from 127.0.0.1
+2025-06-17 14:50:04,381 - __main__ - INFO - Auth header present: Bearer ***
+2025-06-17 14:50:04,383 - controllers.recommendation_controller - INFO - GET existing user recommendations request: {'user_id': 1, 'top_k': 10}
+2025-06-17 14:50:04,383 - controllers.recommendation_controller - INFO - Authenticated user: {'user_id': None, 'email': 'user@example.com', 'username': None, 'role': 'user', 'exp': 1750738310, 'iat': 1750133510}
+2025-06-17 14:50:04,383 - services.recommendation_service - INFO - Getting recommendations for user: 1, top_k: 10
+2025-06-17 14:50:31,477 - __main__ - INFO - Response: 200 for GET /api/recommendations/existing-user/1
+2025-06-17 14:50:31,478 - werkzeug - INFO - 127.0.0.1 - - [17/Jun/2025 14:50:31] "GET /api/recommendations/existing-user/1 HTTP/1.1" 200 -
+2025-06-17 14:51:15,884 - __main__ - INFO - Request: GET /api/recommendations/new-user-get from 127.0.0.1
+2025-06-17 14:51:15,884 - __main__ - INFO - Auth header present: Bearer ***
+2025-06-17 14:51:15,886 - __main__ - INFO - Response: 400 for GET /api/recommendations/new-user-get
+2025-06-17 14:51:15,886 - werkzeug - INFO - 127.0.0.1 - - [17/Jun/2025 14:51:15] "[31m[1mGET /api/recommendations/new-user-get HTTP/1.1[0m" 400 -
+2025-06-17 14:54:40,835 - __main__ - INFO - Request: POST /api/recommendations/new-user from 127.0.0.1
+2025-06-17 14:54:40,835 - __main__ - INFO - Auth header present: Bearer ***
+2025-06-17 14:54:40,837 - controllers.recommendation_controller - INFO - POST new user recommendations request: {'preferred_categories': '[ayam, kambing]', 'preferred_difficulty': 'Cepat & Mudah'}
+2025-06-17 14:54:40,837 - controllers.recommendation_controller - INFO - Authenticated user: {'user_id': None, 'email': 'user@example.com', 'username': None, 'role': 'user', 'exp': 1750738310, 'iat': 1750133510}
+2025-06-17 14:54:40,839 - __main__ - INFO - Response: 400 for POST /api/recommendations/new-user
+2025-06-17 14:54:40,840 - werkzeug - INFO - 127.0.0.1 - - [17/Jun/2025 14:54:40] "[31m[1mPOST /api/recommendations/new-user HTTP/1.1[0m" 400 -
+2025-06-17 14:58:56,616 - __main__ - INFO - Request: POST /api/recommendations/new-user from 127.0.0.1
+2025-06-17 14:58:56,617 - __main__ - INFO - Auth header present: Bearer ***
+2025-06-17 14:58:56,618 - controllers.recommendation_controller - INFO - POST new user recommendations request: {'preferred_categories': ['ayam', 'kambing'], 'preferred_difficulty': 'Cepat & Mudah'}
+2025-06-17 14:58:56,618 - controllers.recommendation_controller - INFO - Authenticated user: {'user_id': None, 'email': 'user@example.com', 'username': None, 'role': 'user', 'exp': 1750738310, 'iat': 1750133510}
+2025-06-17 14:58:56,618 - __main__ - INFO - Response: 400 for POST /api/recommendations/new-user
+2025-06-17 14:58:56,619 - werkzeug - INFO - 127.0.0.1 - - [17/Jun/2025 14:58:56] "[31m[1mPOST /api/recommendations/new-user HTTP/1.1[0m" 400 -
+2025-06-17 14:59:09,483 - __main__ - INFO - Request: POST /api/recommendations/new-user from 127.0.0.1
+2025-06-17 14:59:09,483 - __main__ - INFO - Auth header present: Bearer ***
+2025-06-17 14:59:09,484 - controllers.recommendation_controller - INFO - POST new user recommendations request: {'preferred_categories': ['Ayam', 'Kambing'], 'preferred_difficulty': 'Cepat & Mudah'}
+2025-06-17 14:59:09,484 - controllers.recommendation_controller - INFO - Authenticated user: {'user_id': None, 'email': 'user@example.com', 'username': None, 'role': 'user', 'exp': 1750738310, 'iat': 1750133510}
+2025-06-17 14:59:09,484 - services.recommendation_service - INFO - Getting new user recommendations with categories: ['Kambing', 'Ayam'], difficulty: Cepat & Mudah, top_k: 10
+2025-06-17 14:59:35,674 - __main__ - INFO - Response: 200 for POST /api/recommendations/new-user
+2025-06-17 14:59:35,675 - werkzeug - INFO - 127.0.0.1 - - [17/Jun/2025 14:59:35] "POST /api/recommendations/new-user HTTP/1.1" 200 -
