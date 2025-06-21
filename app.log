@@ -343,3 +343,46 @@ TypeError: EnhancedIndonesianRecipeRecommender.load_model() takes 2 positional a
 2025-06-17 14:59:09,484 - services.recommendation_service - INFO - Getting new user recommendations with categories: ['Kambing', 'Ayam'], difficulty: Cepat & Mudah, top_k: 10
 2025-06-17 14:59:35,674 - __main__ - INFO - Response: 200 for POST /api/recommendations/new-user
 2025-06-17 14:59:35,675 - werkzeug - INFO - 127.0.0.1 - - [17/Jun/2025 14:59:35] "POST /api/recommendations/new-user HTTP/1.1" 200 -
+2025-06-20 19:30:21,564 - core.recommender_init - INFO - Recommender instance created successfully
+2025-06-20 19:30:21,564 - core.recommender_init - INFO - Current working directory: C:\dbs\Sistem Rekomendasi Makanan Indonesia
+2025-06-20 19:30:21,564 - core.recommender_init - INFO - Checking paths:
+2025-06-20 19:30:21,564 - core.recommender_init - INFO -   H5 model: models/recipe_recommender_model.h5 - exists: True
+2025-06-20 19:30:21,564 - core.recommender_init - INFO -   Components: models/recipe_recommender_components.joblib - exists: True
+2025-06-20 19:30:21,564 - core.recommender_init - INFO -   Metadata: models/recipe_recommender_metadata.json - exists: True
+2025-06-20 19:30:21,564 - core.recommender_init - INFO - Found model files, attempting to load from: models/recipe_recommender
+2025-06-20 19:30:21,908 - tensorflow - WARNING - From C:\dbs\Sistem Rekomendasi Makanan Indonesia\venv\Lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-06-20 19:30:33,866 - core.recommender_init - INFO - Model loaded successfully!
+2025-06-20 19:30:33,866 - routes.recommendation_routes - INFO - Recommendation routes initialized
+2025-06-20 19:30:33,866 - core.app_factory - INFO - Flask app created with config: development
+2025-06-20 19:30:33,866 - __main__ - INFO - Starting Flask app in development mode
+2025-06-20 19:30:33,866 - __main__ - INFO - Debug mode: True
+2025-06-20 19:30:34,758 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.8:5000
+2025-06-20 19:30:34,758 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-20 19:30:34,766 - werkzeug - INFO -  * Restarting with stat
+2025-06-20 19:30:45,701 - core.recommender_init - INFO - Recommender instance created successfully
+2025-06-20 19:30:45,701 - core.recommender_init - INFO - Current working directory: C:\dbs\Sistem Rekomendasi Makanan Indonesia
+2025-06-20 19:30:45,701 - core.recommender_init - INFO - Checking paths:
+2025-06-20 19:30:45,701 - core.recommender_init - INFO -   H5 model: models/recipe_recommender_model.h5 - exists: True
+2025-06-20 19:30:45,701 - core.recommender_init - INFO -   Components: models/recipe_recommender_components.joblib - exists: True
+2025-06-20 19:30:45,701 - core.recommender_init - INFO -   Metadata: models/recipe_recommender_metadata.json - exists: True
+2025-06-20 19:30:45,701 - core.recommender_init - INFO - Found model files, attempting to load from: models/recipe_recommender
+2025-06-20 19:30:45,951 - tensorflow - WARNING - From C:\dbs\Sistem Rekomendasi Makanan Indonesia\venv\Lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-06-20 19:31:02,329 - core.recommender_init - INFO - Model loaded successfully!
+2025-06-20 19:31:02,341 - routes.recommendation_routes - INFO - Recommendation routes initialized
+2025-06-20 19:31:02,378 - core.app_factory - INFO - Flask app created with config: development
+2025-06-20 19:31:02,378 - __main__ - INFO - Starting Flask app in development mode
+2025-06-20 19:31:02,379 - __main__ - INFO - Debug mode: True
+2025-06-20 19:31:02,454 - werkzeug - WARNING -  * Debugger is active!
+2025-06-20 19:31:02,472 - werkzeug - INFO -  * Debugger PIN: 939-827-242
+2025-06-20 19:32:24,923 - handlers.middleware - INFO - Request: POST /api/recommendations/new-user from 127.0.0.1
+2025-06-20 19:32:24,925 - handlers.middleware - INFO - Auth header present: Bearer ***
+2025-06-20 19:32:24,938 - controllers.recommendation_controller - INFO - POST new user recommendations request: {'preferred_categories': ['Ayam', 'Kambing'], 'preferred_difficulty': 'Cepat & Mudah'}
+2025-06-20 19:32:24,940 - controllers.recommendation_controller - INFO - Authenticated user: {'user_id': None, 'email': 'user@example.com', 'username': None, 'role': 'user', 'exp': 1750738310, 'iat': 1750133510}
+2025-06-20 19:32:24,941 - services.recommendation_service - INFO - Getting new user recommendations with categories: ['Ayam', 'Kambing'], difficulty: Cepat & Mudah, top_k: 10
+2025-06-20 19:32:59,803 - handlers.middleware - INFO - Response: 200 for POST /api/recommendations/new-user
+2025-06-20 19:32:59,806 - werkzeug - INFO - 127.0.0.1 - - [20/Jun/2025 19:32:59] "POST /api/recommendations/new-user HTTP/1.1" 200 -
