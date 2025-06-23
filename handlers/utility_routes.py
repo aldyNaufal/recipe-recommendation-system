@@ -2,7 +2,6 @@ import os
 from flask import jsonify
 from core.logger import AppLogger
 
-
 class UtilityRoutes:
     """Utility routes like health check, debug, API info"""
     
@@ -12,7 +11,7 @@ class UtilityRoutes:
     def register_routes(self, app, config_name, recommender):
         """Register utility routes with Flask app"""
         
-        @app.route('/health', methods=['GET'])
+        @app.route('/api/recommendations/health', methods=['GET'])
         def health_check():
             """Application health check"""
             try:
@@ -84,12 +83,35 @@ class UtilityRoutes:
         }
         
         if recommender is not None:
-            model_status = recommender.get_model_status()
-            status.update({
-                'model_loaded': model_status['model_loaded'],
-                'components_status': model_status['components'],
-                'is_ready': recommender.is_model_loaded()
-            })
+            # PERBAIKAN: Gunakan method yang benar
+            try:
+                # Cek apakah ada method is_loaded
+                if hasattr(recommender, 'is_loaded') and callable(recommender.is_loaded):
+                    model_status = recommender.is_loaded()
+                    status.update({
+                        'model_loaded': model_status.get('model_loaded', False),
+                        'components_status': model_status.get('components', {}),
+                        'is_ready': recommender.is_model_loaded() if hasattr(recommender, 'is_model_loaded') else False
+                    })
+                else:
+                    # Fallback: gunakan is_model_loaded langsung
+                    is_ready = recommender.is_model_loaded() if hasattr(recommender, 'is_model_loaded') else False
+                    status.update({
+                        'model_loaded': is_ready,
+                        'components_status': {
+                            'model': hasattr(recommender, 'model') and recommender.model is not None,
+                            'encoders': hasattr(recommender, 'encoders') and recommender.encoders is not None,
+                            'processed_data': hasattr(recommender, 'processed_data') and recommender.processed_data is not None
+                        },
+                        'is_ready': is_ready
+                    })
+            except Exception as e:
+                self.logger.error(f"Error checking model status: {str(e)}")
+                status.update({
+                    'model_loaded': False,
+                    'components_status': {'error': str(e)},
+                    'is_ready': False
+                })
         else:
             status.update({
                 'model_loaded': False,
@@ -127,7 +149,38 @@ class UtilityRoutes:
         else:
             debug_info['models_directory_files'] = 'Directory does not exist'
         
+        # PERBAIKAN: Ganti get_model_status() dengan method yang benar
         if recommender is not None:
-            debug_info['model_status'] = recommender.get_model_status()
+            try:
+                # Coba berbagai method yang mungkin ada
+                if hasattr(recommender, 'is_loaded') and callable(recommender.is_loaded):
+                    debug_info['model_status'] = recommender.is_loaded()
+                elif hasattr(recommender, 'is_model_loaded') and callable(recommender.is_model_loaded):
+                    debug_info['model_status'] = {
+                        'is_loaded': recommender.is_model_loaded(),
+                        'components': {
+                            'model': hasattr(recommender, 'model') and recommender.model is not None,
+                            'encoders': hasattr(recommender, 'encoders') and recommender.encoders is not None,
+                            'processed_data': hasattr(recommender, 'processed_data') and recommender.processed_data is not None
+                        }
+                    }
+                else:
+                    # Manual check jika tidak ada method
+                    debug_info['model_status'] = {
+                        'available_methods': [method for method in dir(recommender) if not method.startswith('_')],
+                        'manual_check': {
+                            'has_model': hasattr(recommender, 'model'),
+                            'has_encoders': hasattr(recommender, 'encoders'),
+                            'has_processed_data': hasattr(recommender, 'processed_data'),
+                            'model_is_none': recommender.model is None if hasattr(recommender, 'model') else 'N/A',
+                            'encoders_is_none': recommender.encoders is None if hasattr(recommender, 'encoders') else 'N/A',
+                            'processed_data_is_none': recommender.processed_data is None if hasattr(recommender, 'processed_data') else 'N/A'
+                        }
+                    }
+            except Exception as e:
+                debug_info['model_status'] = {
+                    'error': str(e),
+                    'recommender_type': type(recommender).__name__
+                }
         
         return debug_info

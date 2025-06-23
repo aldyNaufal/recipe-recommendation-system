@@ -984,6 +984,9 @@ class EnhancedIndonesianRecipeRecommender:
                 hasattr(self, 'encoders') and self.encoders is not None and 
                 hasattr(self, 'processed_data') and self.processed_data is not None)
     
+
+
+    
     def predict_recommendations(self, user_input):
         """Method untuk prediksi rekomendasi (contoh implementasi)"""
         if self.model is None:

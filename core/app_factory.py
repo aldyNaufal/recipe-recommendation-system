@@ -1,15 +1,14 @@
+# Di core/app_factory.py
 import os
 from flask import Flask
 from flask_cors import CORS
 from config import config
 from routes.recommendation_routes import recommendation_bp, init_routes
-
 from core.logger import AppLogger
 from core.recommender_init import RecommenderInitializer
 from handlers.error_handlers import ErrorHandlers
 from handlers.middleware import Middleware
 from handlers.utility_routes import UtilityRoutes
-
 
 class FlaskAppFactory:
     """Flask application factory"""
@@ -26,8 +25,15 @@ class FlaskAppFactory:
         config_name = config_name or os.environ.get('FLASK_ENV', 'development')
         app.config.from_object(config[config_name])
         
-        # Setup CORS
-        CORS(app, origins=app.config['CORS_ORIGINS'])
+        # Setup CORS dengan konfigurasi yang lebih lengkap
+        CORS(app, 
+             origins=app.config['CORS_ORIGINS'],
+             methods=['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+             allow_headers=['Content-Type', 'Authorization'],
+             supports_credentials=True)
+        
+        # Log CORS configuration
+        self.logger.info(f"CORS Origins: {app.config['CORS_ORIGINS']}")
         
         # Initialize recommender
         recommender_init = RecommenderInitializer()

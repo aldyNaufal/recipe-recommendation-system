@@ -14,6 +14,28 @@ class RecommendationController:
     def set_recommender(self, recommender):
         """Set recommender model"""
         self.recommendation_service.set_recommender(recommender)
+
+    def _check_model_loaded(self):
+        """Helper method untuk check model"""
+        if not self.recommendation_service.recommender:
+            return False, "Model not loaded"
+        
+        recommender = self.recommendation_service.recommender
+        
+        # Gunakan is_model_loaded() method
+        if hasattr(recommender, 'is_model_loaded') and callable(recommender.is_model_loaded):
+            if recommender.is_model_loaded():
+                return True, "Model loaded successfully"
+            else:
+                return False, "Model components not fully loaded"
+        else:
+            # Fallback manual check
+            if (hasattr(recommender, 'model') and recommender.model is not None and
+                hasattr(recommender, 'encoders') and recommender.encoders is not None and
+                hasattr(recommender, 'processed_data') and recommender.processed_data is not None):
+                return True, "Model loaded successfully"
+            else:
+                return False, "Model components missing"  
     
     def get_existing_user_recommendations_post(self):
         """Handle POST request for existing user recommendations"""

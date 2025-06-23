@@ -19,8 +19,22 @@ class Config:
     MODEL_PATH = os.environ.get('MODEL_PATH', './models/')
     
     # CORS settings
-    CORS_ORIGINS = os.environ.get('CORS_ORIGINS', 'http://localhost:3000').split(',')
-
+    # CORS settings
+    @staticmethod
+    def get_cors_origins():
+        cors_env = os.environ.get('CORS_ORIGINS')
+        if cors_env:
+            return [origin.strip() for origin in cors_env.split(',')]
+        else:
+            # Default origins dengan berbagai variasi
+            return [
+                'http://localhost:5173',
+                'http://localhost:3000', 
+                'http://127.0.0.1:5173',
+                'http://127.0.0.1:3000'
+            ]
+    
+    CORS_ORIGINS = get_cors_origins()
 class DevelopmentConfig(Config):
     """Development configuration"""
     DEBUG = True
